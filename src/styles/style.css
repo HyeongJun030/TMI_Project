@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* Global */
 :root {
   /* Color */
@@ -11,8 +12,9 @@
   --color-dark-blue: #0034ec;
   --color-light-red: #fbc3c3;
   --color-red: #eb7767;
+  --color-regular-red: #e74c3c;
   --color-dark-red: #e10000;
-  --color-grey: #eeeeee;
+  --color-grey: #d9d9d9;
   --color-font-grey: #585858;
   --color-black: #231816;
 
@@ -31,7 +33,7 @@
   --weight-light: 300;
 
   /* Size */
-  --btn-border-radius: 6px;
+  --btn-border-radius: 10px;
   --input-border-radius: 10px;
   --shopping-list-border-radius: 10px;
   --map-border-radius: 10px;
@@ -39,6 +41,45 @@
 
   /* Animation */
   /* --animation-duration: 300ms; */
+}
+
+/* Icon - Google Material icons */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(path/to/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'), local('MaterialIcons-Regular'),
+    url(path/to/MaterialIcons-Regular.woff2) format('woff2'),
+    url(path/to/MaterialIcons-Regular.woff) format('woff'),
+    url(path/to/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+/* Utility */
+/* 스크린 리더 전용 */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* 한줄 말줄임 */
+.sl-ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 둘줄 말줄임 */
+.multi-ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 /* Universal tags*/
@@ -74,7 +115,7 @@ button {
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
-  color: var(--color-black);
+  color: var(--color-white);
   margin: 16px 0px;
 }
 
@@ -96,40 +137,42 @@ p {
 
 /* Header */
 .header {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
-  height: 167px;
+  height: 170px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Navbar */
 #navbar__vers-green {
-  position: fixed;
+  position: sticky;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 100px;
+  padding: 28px 200px;
 }
-
-/* #navbar.navbar--dark {
-  background-color: var(--color-light-green);
-  padding: 8px;
-} */
 
 .logo__green {
   width: auto;
-  height: 44px;
+  height: 78px;
 }
 
 .navbar__menu {
   display: flex;
-  height: 28px;
   align-items: center;
+  width: 760px;
+  height: 68px;
 }
 
 .navbar__menu__item {
-  margin: 0 10px;
-  font-size: var(--font-small);
-  font-weight: var(--weight-medium);
+  margin-right: 35px;
+  font-size: 23px;
+  height: 28px;
+  font-weight: var(--weight-bold);
   color: var(--color-black);
   cursor: pointer;
 }
@@ -139,35 +182,30 @@ p {
   font-weight: var(--weight-extra-bold);
 }
 
-/* .navbar__menu__item:hover {
-  border-bottom-color: ;
-} */
-
 .navbar__menu__login-btn {
-  width: 98px;
-  height: 38px;
-  margin: 0 10px;
+  width: 160px;
+  height: 63px;
+  font-size: 23px;
   background-color: var(--color-green);
   color: var(--color-white);
   border-radius: var(--btn-border-radius);
-  padding: 5px;
 }
 
 /* Title bar */
 #titlebar {
-  position: fixed;
-  top: 103px;
-  width: 100%;
-  height: 64px;
   display: flex;
+  position: sticky;
+  top: 170px;
+  width: 100%;
+  height: 106px;
   justify-content: flex-start;
   align-items: center;
   background-color: var(--color-green);
-  padding: 10px 110px;
+  padding: 0 203px;
 }
 
 .tit__sub__txt {
-  font-size: var(--font-medium);
+  font-size: var(--font-large);
   font-weight: var(--weight-light);
   color: var(--color-white);
   margin: 8px 0;
@@ -175,18 +213,13 @@ p {
 
 /* Section common */
 .section {
-  padding: 30px 110px;
+  padding: 54px 200px 0 200px;
   margin: auto;
+  max-width: 1920px;
 }
-
-/* .section__container {
-  max-width: 1200px;
-  margin: auto;
-} */
 
 /* Main Page */
 /* Intro Page */
-/* Shopping List Page */
 /* PriceData Page */
 /* Account Book Page */
 /* Mart Discount Info Page */
