@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장비서</title>
+  <meta name="description" content="A project that provides price data services." />
+  <meta name="author" content="TMI" />
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="stylesheet" href="./src/styles/shoppingList.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" type="image/png" href="./src/assets/icons/favicon.png" />
+</head>
+
+<body>
+  <header class="header" display="none">
+    <!-- Navbar -->
+    <nav id="navbar__vers-green">
+      <div class="navbar__logo">
+        <a href="#">
+          <img src="./src/assets/icons/jang_logo_green.png" alt="장비서 로고" class="logo__green">
+        </a>
+      </div>
+      <ul class="navbar__menu">
+        <li><a href="./ShoppingList.html" class="navbar__menu__item active">쇼핑 리스트</a></li>
+        <li><a href="#" class="navbar__menu__item">가계부 정리</a></li>
+        <li><a href="#" class="navbar__menu__item">오늘의 물가</a></li>
+        <li><a href="#" class="navbar__menu__item">회원가입</a></li>
+        <li><button type="button" id="open" class="navbar__menu__login-btn">로그인</button></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Title bar -->
+  <section id="titlebar">
+    <span class="tit__sub__txt">장보기 전, &nbsp</span>
+    <h1>쇼핑리스트 노트 📝</h1>
+  </section>
+  <!-- Shopping List Page -->
+  <section id="shopping-list" class="section">
+    <!--list-->
+    <div class="container">
+      <table id="userList" class="table table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th>
+              <p>상품명</p>
+            </th>
+            <th>
+              <p>품종</p>
+            </th>
+            <th>
+              <p>등급</p>
+            </th>
+            <th>
+              <p>수량</p>
+            </th>
+            <th></th>
+            <th></th>
+            <br>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="userId"><input type="checkbox" class="check"></td>
+            <td>
+              <p>감자(100g 기준)</p>
+            </td>
+            <td>
+              <p>품종</p>
+            </td>
+            <td>
+              <p>등급</p>
+            </td>
+            <td>
+              <p class="num-btn">
+                <input class="btn" type='button' onclick='count("plus")' value='+' />
+                <span id="result">
+                  0
+                </span>
+                <input class="btn" type='button' onclick='count("minus")' value='-' />
+              </p>
+            </td>
+            <td>
+              <p>
+                <button class="btn btn-danger pull-right btn-r " style="width: 80px; height: 40px;">수정</button>
+              </p>
+            </td>
+            <td>
+
+              <button class="btn btn-delete pull-right"><span style="color: #EB7767; font-size: 50px;"
+                  class="material-icons">
+                  close
+                </span></button>
+
+            </td>
+          </tr>
+          <tr>
+            <td class="userId"><input type="checkbox" class="check"></td>
+            <td>
+              <p>샴푸</p>
+            </td>
+            <td>
+              <p>품종</p>
+            </td>
+            <td>
+              <p>등급</p>
+            </td>
+            <td>
+              <p class="num-btn">
+                <input class="btn" type='button' onclick='count("plus")' value='+' />
+                <span id="result">
+                  0
+                </span>
+                <input class="btn" type='button' onclick='count("minus")' value='-' />
+              </p>
+            </td>
+            <td>
+              <p>
+                <button class="btn btn-danger pull-right btn-r " style="width: 80px; height: 40px;">수정</button>
+              </p>
+            </td>
+            <td>
+              <button class="btn btn-delete pull-right" type="button">
+                <span style="color: #EB7767; font-size: 50px;" class="material-icons">close</span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="btn-box">
+      <button id="btn-open-popup" class="btn "><span style="color: #EB7767; font-size: 50px;" class="material-icons">
+          add_circle_outline
+        </span> </button>
+      <a href="./ShoppingList2.html"><button class="btn btn-m"><span>어디서 얼마에 구입할 수 있는지 확인!</span></button></a>
+    </div>
+    <!--modal-->
+    <div class="modal hidden">
+      <!--배경색-->
+      <div class="popup-wrap" id="popup">
+        <div class="popup">
+          <div class="popup-head">
+            <span class="head-title">품목 등록</span>
+          </div>
+          <div class="popup-body">
+            <div class="body-content">
+              <div class="body-titlebox">
+                <!--검색창-->
+                <input type="text" placeholder="어떤 물품을 구매할 예정이세요?">
+                <i class="material-icons md-24 md-dark">search</i>
+              </div>
+              <!--리스트창-->
+              <div class="body-contentbox">
+                <span>품목명</span>
+                <div> <input type="text" style="width: 80%;"> </div>
+                <span>품종 선택</span>
+                <div>
+                  <select>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                  </select>
+                </div>
+                <span>등급 선택</span>
+                <div>
+                  <select>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                  </select></div>
+                <span>수량</span>
+                <div class="num-btn">
+                  <input class="btn" type='button' onclick='count("plus")' value='+' />
+                  <span id="result">0</span>
+                  <input class="btn" type='button' onclick='count("minus")' value='-' />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--버튼-->
+          <div class="popup-foot">
+            <button class="pop-btn confirm" id="confirm">등록</button>
+            <a href="shoppinglist.html"><button class="pop-btn close" id="close">확인</button></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+    const eventTarget = document.getElementsByClassName('btn-delete')
+
+    for (let i = 0; i < eventTarget.length; i++) {
+      eventTarget[i].addEventListener('click', function () {
+        var parent = document.querySelector('#userList tbody');
+        parent.removeChild(this.parentElement.parentElement);
+        i--;
+
+      })
+    }
+
+    const openButton = document.getElementById("btn-open-popup");
+    const modal = document.querySelector(".modal");
+    const openModal = () => {
+      modal.classList.remove("hidden");
+    }
+    openButton.addEventListener("click", openModal)
+  </script>
+
+</body>
+
+</html>

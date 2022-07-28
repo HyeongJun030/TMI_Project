@@ -36,7 +36,7 @@
   --btn-border-radius: 10px;
   --input-border-radius: 10px;
   --shopping-list-border-radius: 10px;
-  --map-border-radius: 10px;
+  --map-border-radius: 20px;
   --price-list-border-radius: 30px;
 
   /* Animation */
@@ -208,8 +208,29 @@ p {
   margin: 8px 0;
 }
 
+/* Section common */
+.section {
+  padding: 50px 0 0 0;
+  max-width: 1520px;
+  margin: auto;
+}
+
+/* Shopping List Page 2 */
+#shopping-list {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.shopping-list__list-container {
+  display: flex;
+  flex-direction: column;
+  width: 487px;
+  margin-right: 20px;
+}
+
 /* Search Form */
-/* input[type='text'] {
+input[type='text'] {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,6 +241,7 @@ p {
   font-size: 20px;
   margin: 0;
   outline: none;
+  /* padding: 4px; */
   box-sizing: border-box;
   transition: 0.3s;
   font-size: 11px;
@@ -263,17 +285,207 @@ input[type='text']:focus {
 
 .inputWithIcon input[type='text']:focus + i {
   color: var(--color-green);
-} */
-
-/* Section common */
-.section {
-  padding: 50px 0 0 0;
-  max-width: 1520px;
-  margin: auto;
 }
 
-/* Main Page */
-/* Intro Page */
-/* PriceData Page */
-/* Account Book Page */
-/* Mart Discount Info Page */
+/* Mart List */
+.shopping-list__mart-info__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shopping-list__mart-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 487px;
+  height: 158px;
+  border: 1px solid var(--color-grey);
+  margin-top: 16px;
+  margin-bottom: 26px;
+  padding: 0 22px;
+}
+
+.shopping-list__mart-info:active {
+  border-color: var(--color-green);
+  box-shadow: 0 0 8px 0 var(--color-green);
+}
+
+.shopping-list__mart-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+}
+
+.sort {
+  display: inline-block;
+  align-items: center;
+}
+
+.shopping-list__mart-num {
+  display: flex;
+  margin-right: 18px;
+  width: 34px;
+  height: 36px;
+  font-size: var(--font-large);
+  font-weight: var(--weight-extra-bold);
+  color: var(--color-green);
+}
+
+.shopping-list__mart-tit {
+  display: flex;
+  width: 146px;
+  height: 23px;
+  margin-right: 18px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: var(--weight-extra-bold);
+}
+
+.shopping-list__mart-list__item {
+  height: 17px;
+  font-size: 15px;
+  font-weight: var(--weight-medium);
+}
+
+.shopping-list__mart-sub {
+  flex-direction: column;
+  margin: 0 18px 0 51px;
+  width: 137px;
+  font-size: 14px;
+}
+
+.shopping-list__mart-list__desc {
+  height: 17px;
+  align-content: flex-start;
+  font-size: 15px;
+  font-weight: var(--weight-medium);
+  margin-top: 11px;
+}
+
+.item-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 231px;
+  height: 34px;
+  font-size: 15px;
+  font-weight: var(--weight-medium);
+  background: var(--color-blue);
+  border-radius: var(--btn-border-radius);
+}
+
+/* Click 일단 이렇게 구현했습니다 저의 한계.. */
+.item-star {
+  margin-left: 396px;
+}
+.item-star::after {
+  display: flex;
+  content: '';
+  width: 14px;
+  height: 13px;
+  vertical-align: top;
+}
+
+/* Mart Map */
+.shopping-list__map-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 1000px;
+  height: 635px;
+  background-image: url(../assets/images/mapImg.png);
+}
+
+.shopping-list__pin-card {
+  display: flex;
+  margin: 20px;
+}
+
+.shopping-list__pin-img {
+  position: absolute;
+  left: 266px;
+  overflow: hidden;
+}
+
+.pin-img {
+  width: 106px;
+  height: 106px;
+}
+
+.pin-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 363px;
+  height: 108px;
+  border: 2px solid var(--color-black);
+  background-color: var(--color-white);
+  border-radius: var(--map-border-radius);
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.pin-content__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 343px;
+}
+
+.pin-content__num {
+  display: flex;
+  margin-right: 6px;
+  width: 34px;
+  height: 36px;
+  font-size: var(--font-large);
+  font-weight: var(--weight-extra-bold);
+  color: var(--color-regular-red);
+}
+
+.pin-content__title {
+  display: flex;
+  height: 23px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: var(--weight-extra-bold);
+}
+
+.pin-content__time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  font-size: 13px;
+  font-weight: var(--weight-regular);
+  margin-bottom: 10px;
+}
+
+.pin-content__time .material-icons {
+  margin-left: 14px;
+}
+
+.time-tit {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.pin-content__price-tit {
+  display: flex;
+  align-items: center;
+  height: 21px;
+  font-size: 18px;
+  font-weight: var(--weight-extra-bold);
+  color: var(--color-regular-red);
+  margin-right: 22px;
+}
+
+.pin-content__price-cont {
+  font-size: 15px;
+}

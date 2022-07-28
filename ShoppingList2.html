@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장비서</title>
+    <meta name="description" content="A project that provides price data services." />
+    <meta name="author" content="TMI" />
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/shoppingList2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/png" href="./src/assets/icons/favicon.png" />
+    <script src="./src/js/components/shoppingList2.js" defer></script>
+</head>
+
+<body>
+    <header class="header" display="none">
+        <!-- Navbar -->
+        <nav id="navbar__vers-green">
+            <div class="navbar__logo">
+                <a href="#">
+                    <img src="./src/assets/icons/jang_logo_green.png" alt="장비서 로고" class="logo__green">
+                </a>
+            </div>
+            <ul class="navbar__menu">
+                <li><a href="#" class="navbar__menu__item active">쇼핑 리스트</a></li>
+                <li><a href="#" class="navbar__menu__item">가계부 정리</a></li>
+                <li><a href="#" class="navbar__menu__item">오늘의 물가</a></li>
+                <li><a href="#" class="navbar__menu__item">회원가입</a></li>
+                <li><button type="button" id="open" class="navbar__menu__login-btn">로그인</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Title bar -->
+    <section id="titlebar">
+        <span class="tit__sub__txt">장보기 전, &nbsp</span>
+        <h1>마트 거리와 예상 금액 확인하기 🛒</h1>
+    </section>
+
+    <!-- Shopping List Page 2-->
+    <section id="shopping-list" class="section">
+        <h2 class="sr-only">쇼핑리스트 마트찾기 지도페이지</h2>
+        <!-- Search Form -->
+        <div class="shopping-list__list-container">
+            <div class="inputWithIcon">
+                <input type="text" placeholder="어느 마트를 들리실 예정인가요?">
+                <i class="material-icons">search</i>
+            </div>
+            <!-- Mart List -->
+            <ul class="shopping-list__mart-info__container">
+                <li class="shopping-list__mart-info">
+                    <article class="shopping-list__mart-content">
+                        <!-- <a href="#none" class="link-mart"></a> 안에 넣어서 전체 카드 선택시 페이지 이동하게 할지 나중에 정해서 바꾸기-->
+                        <div class="sort">
+                            <span class="shopping-list__mart-num">A</span>
+                        </div>
+                        <!-- 이미지, 아이콘, 텍스트로 할지 정해서 바꾸기- 현재는 텍스트 알파벳으로 표시 -->
+                        <div class="sort">
+                            <strong class="shopping-list__mart-tit">이마트 과천점</strong>
+                        </div>
+                        <div class="shopping-list__mart-list__item">경기 과천시 별양상가3로 11</div>
+                        <div class="shopping-list__mart-sub sort">
+                            <div class="shopping-list__mart-list__desc">매일 10:00 ~ 22:00</div>
+                            <div class="shopping-list__mart-list__desc">02-6445-4123</div>
+                        </div>
+                        <!-- <dl class="list-info">
+                            <div>
+                                <dt>주소</dt>
+                                <dd>경기 과천시 별양상가3로 11</dd>
+                            </div>
+                            <div>
+                                <dt>운연시간</dt>
+                                <dd>매일 10:00 ~ 22:00</dd>
+                            </div>
+                            <div>
+                                <dt>연락처</dt>
+                                <dd>02-6445-4123</dd>
+                            </div>
+                            <div class="item-click">
+                                <dd class="multi-ellipsis">
+                                    구체적인 예산 체크하기
+                                </dd>
+                            </div>
+                        </dl> -->
+                        <div class="item-btn sort">
+                            <a href="#쇼핑리스트3">구체적인 <strong style="color: #fffcb6; font-weight: 600;">예산
+                                    체크</strong>하기</a>
+                        </div>
+                        <img src="./src/assets/images/click!.png" alt="클릭 문구 이미지" class="item-star">
+                    </article>
+                </li>
+                <li class="shopping-list__mart-info">
+                    <article class="shopping-list__mart-content">
+                        <!-- <a href="#none" class="link-mart"></a> 안에 넣어서 전체 카드 선택시 페이지 이동하게 할지 나중에 정해서 바꾸기-->
+                        <div class="sort">
+                            <span class="shopping-list__mart-num">B</span>
+                        </div>
+                        <!-- 이미지, 아이콘, 텍스트로 할지 정해서 바꾸기- 현재는 텍스트 알파벳으로 표시 -->
+                        <div class="sort">
+                            <strong class="shopping-list__mart-tit">롯데마트 과천점</strong>
+                        </div>
+                        <div class="shopping-list__mart-list__item">경기 과천시 과천대로 11</div>
+                        <div class="shopping-list__mart-sub sort">
+                            <div class="shopping-list__mart-list__desc">매일 10:00 ~ 22:00</div>
+                            <div class="shopping-list__mart-list__desc">02-9898-7878</div>
+                        </div>
+                        <div class="item-btn sort">
+                            <a href="#쇼핑리스트3">구체적인 <strong style="color: #fffcb6; font-weight: 600;">예산
+                                    체크</strong>하기</a>
+                        </div>
+                        <img src="./src/assets/images/click!.png" alt="클릭 문구 이미지" class="item-star">
+                    </article>
+                </li>
+                <li class="shopping-list__mart-info">
+                    <article class="shopping-list__mart-content">
+                        <!-- <a href="#none" class="link-mart"></a> 안에 넣어서 전체 카드 선택시 페이지 이동하게 할지 나중에 정해서 바꾸기-->
+                        <div class="sort">
+                            <span class="shopping-list__mart-num">C</span>
+                        </div>
+                        <!-- 이미지, 아이콘, 텍스트로 할지 정해서 바꾸기- 현재는 텍스트 알파벳으로 표시 -->
+                        <div class="sort">
+                            <strong class="shopping-list__mart-tit">홈플러스 과천점</strong>
+                        </div>
+                        <div class="shopping-list__mart-list__item">경기 과천시 부림동 99번길</div>
+                        <div class="shopping-list__mart-sub sort">
+                            <div class="shopping-list__mart-list__desc">매일 10:00 ~ 22:00</div>
+                            <div class="shopping-list__mart-list__desc">02-9876-0909</div>
+                        </div>
+                        <div class="item-btn sort">
+                            <a href="#쇼핑리스트3">구체적인 <strong style="color: #fffcb6; font-weight: 600;">예산
+                                    체크</strong>하기</a>
+                        </div>
+                        <img src="./src/assets/images/click!.png" alt="클릭 문구 이미지" class="item-star">
+                    </article>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mart Map -->
+        <div class="shopping-list__map-container">
+            <div class="shopping-list__pin-card">
+                <div id="clickPin" class="shopping-list__pin-img">
+                    <img src="./src/assets/icons/pinpoint.png" alt="지도 핀포인트 아이콘" class="pin-img" />
+                </div>
+                <div id="pinContent" class="pin-content">
+                    <div class="pin-content__container">
+                        <span class="pin-content__num">A</span>
+                        <strong class="pin-content__title">이마트 과천점</strong>
+                    </div>
+                    <div class="pin-content__container">
+                        <dl class="pin-content__time">
+                            <!-- 아이콘 추가 -->
+                            <!-- <strong class="time-tit">거리</strong> -->
+                            <span class="time-cont">2.1km</span>
+                            <i class="material-icons">directions_bus_filled</i>
+                            <strong class="time-tit">대중교통</strong>
+                            <span class="time-cont">13분</span>
+                            <i class="material-icons">directions_car_filled</i>
+                            <strong class="time-tit">자가용</strong>
+                            <span class="time-cont">7분</span>
+                        </dl>
+                    </div>
+                    <div class="pin-content__container">
+                        <span class="pin-content__price-tit">예상 금액</span>
+                        <span class="pin-content__price-cont">약 <strong
+                                style="font-weight: 800;">47,300원</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="shopping-list__pin-card">
+                <div class="shopping-list__pin-img">
+                    <img src="./src/assets/icons/pinpoint.png" alt="지도 핀포인트 아이콘" class="pin-img" />
+                </div>
+                <div class="pin-content">
+                    <div class="pin-content__container">
+                        <span class="pin-content__num">B</span>
+                        <strong class="pin-content__title">롯데마트 과천점</strong>
+                    </div>
+                    <div class="pin-content__container">
+                        <dl class="pin-content__time">
+                            <!-- 아이콘 추가 -->
+                            <!-- <strong class="time-tit">거리</strong> -->
+                            <span class="time-cont">2.2km</span>
+                            <i class="material-icons">directions_bus_filled</i>
+                            <strong class="time-tit">대중교통</strong>
+                            <span class="time-cont">14분</span>
+                            <i class="material-icons">directions_car_filled</i>
+                            <strong class="time-tit">자가용</strong>
+                            <span class="time-cont">8분</span>
+                        </dl>
+                    </div>
+                    <div class="pin-content__container">
+                        <span class="pin-content__price-tit">예상 금액</span>
+                        <span class="pin-content__price-cont">약 <strong
+                                style="font-weight: 800;">45,300원</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="shopping-list__pin-card">
+                <div class="shopping-list__pin-img">
+                    <img src="./src/assets/icons/pinpoint.png" alt="지도 핀포인트 아이콘" class="pin-img" />
+                </div>
+                <div class="pin-content">
+                    <div class="pin-content__container">
+                        <span class="pin-content__num">C</span>
+                        <strong class="pin-content__title">홈플러스 과천점</strong>
+                    </div>
+                    <div class="pin-content__container">
+                        <dl class="pin-content__time">
+                            <!-- 아이콘 추가 -->
+                            <!-- <strong class="time-tit">거리</strong> -->
+                            <span class="time-cont">2.7km</span>
+                            <i class="material-icons">directions_bus_filled</i>
+                            <strong class="time-tit">대중교통</strong>
+                            <span class="time-cont">18분</span>
+                            <i class="material-icons">directions_car_filled</i>
+                            <strong class="time-tit">자가용</strong>
+                            <span class="time-cont">10분</span>
+                        </dl>
+                    </div>
+                    <div class="pin-content__container">
+                        <span class="pin-content__price-tit">예상 금액</span>
+                        <span class="pin-content__price-cont">약 <strong
+                                style="font-weight: 800;">46,100원</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
