@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -9,14 +9,13 @@
     <meta name="description" content="A project that provides price data services." />
     <meta name="author" content="TMI" />
     <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/shoppingList2.css">
+    <link rel="stylesheet" href="./src/styles/shoppinglist3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="icon" type="image/png" href="./src/assets/icons/favicon.png" />
-    <script src="./src/js/components/shoppingList2.js" defer></script>
 </head>
 
 <body>
@@ -24,7 +23,7 @@
         <!-- Navbar -->
         <nav id="navbar__vers-green">
             <div class="navbar__logo">
-                <a href="#">
+                <a href="#">  
                     <img src="./src/assets/icons/jang_logo_green.png" alt="장비서 로고" class="logo__green">
                 </a>
             </div>
@@ -37,15 +36,13 @@
             </ul>
         </nav>
     </header>
-
     <!-- Title bar -->
     <section id="titlebar">
         <span class="tit__sub__txt">장보기 전, &nbsp</span>
         <h1>마트 거리와 예상 금액 확인하기 🛒</h1>
     </section>
-
-    <!-- Shopping List Page 2-->
-    <section id="shopping-list" class="section">
+     <!-- Shopping List Page 2-->
+     <section id="shopping-list" class="section">
         <h2 class="sr-only">쇼핑리스트 마트찾기 지도페이지</h2>
         <!-- Search Form -->
         <div class="shopping-list__list-container">
@@ -90,7 +87,7 @@
                             </div>
                         </dl> -->
                         <div class="item-btn sort">
-                            <a href="./ShoppingList3.html">구체적인 <strong style="color: #fffcb6; font-weight: 600;">예산
+                            <a href="#쇼핑리스트3">구체적인 <strong style="color: #fffcb6; font-weight: 600;">예산
                                     체크</strong>하기</a>
                         </div>
                         <img src="./src/assets/images/click!.png" alt="클릭 문구 이미지" class="item-star">
@@ -112,7 +109,7 @@
                             <div class="shopping-list__mart-list__desc">02-9898-7878</div>
                         </div>
                         <div class="item-btn sort">
-                            <a href="./ShoppingList3.html">구체적인 <strong style="color: #fffcb6; font-weight: 600;">예산
+                            <a href="#쇼핑리스트3">구체적인 <strong style="color: #fffcb6; font-weight: 600;">예산
                                     체크</strong>하기</a>
                         </div>
                         <img src="./src/assets/images/click!.png" alt="클릭 문구 이미지" class="item-star">
@@ -134,7 +131,7 @@
                             <div class="shopping-list__mart-list__desc">02-9876-0909</div>
                         </div>
                         <div class="item-btn sort">
-                            <a href="./ShoppingList3.html">구체적인 <strong style="color: #fffcb6; font-weight: 600;">예산
+                            <a href="#쇼핑리스트3">구체적인 <strong style="color: #fffcb6; font-weight: 600;">예산
                                     체크</strong>하기</a>
                         </div>
                         <img src="./src/assets/images/click!.png" alt="클릭 문구 이미지" class="item-star">
@@ -234,6 +231,135 @@
             </div>
         </div>
     </section>
+    
+    <!-- Shopping List Page3 -->
+    <section id="shopping-list-price" class="section">
+        <h2 class="mart-result">쇼핑리스트 마트 가격 비교 페이지</h2>
+    
+    <!-- Mart-result(price)-->
+    
+                <div class ="shoppinglist3_tit_box">
+                    <div class="shoppinglist3_tit">이마트 과천점에서 쇼핑하실 때 예상 금액은 
+                        <div class="shoppinglist3_tit_price">&nbsp52,200</div>원&nbsp입니다. 
+                        <i class="material-icons">sentiment_very_satisfied</i> </div>
+                </div>     
+             
+
+    
+
+    <div class="shoppinglist3_priceList_table">
+        <ul class="shoppinglist3_priceList_title">
+            <div class="pricelist_first">
+                    <span><i class="material-icons">shopping_cart</i>구입 예정 품목</span>
+            </div>
+            <div class="pricelist_second">
+                    <span><i class="material-icons">123</i>수량</span>
+            </div>
+            <div class="pricelist_third">
+                    <span><i class="material-icons">storefront</i>마트 가격</span>
+            </div>
+            <div class="pricelist_fourth">   
+                    <span><i class="material-icons">assessment</i>평균 물가</span>
+            </div>
+        </ul>
+        </div>
+
+
+        <div class="shoppinglist3_pricelist_box">
+            <div class="pricelist_first">
+                <span class="shoppinglist3_subject">감자</span>
+                <span class="shoppinglist3_kind">수미</span>
+                <span class="shoppinglist3_class">상품(100g 기준)</span></div>
+            <div class="pricelist_second">
+                <span class="shoppinglist3_quantity">1</span>
+            </div>
+            <div class="pricelist_third">
+                <span class="shoppinglist3_martprice">8,700</span>&nbsp원
+            </div>
+            <div class="pricelist_fourth">
+                <span class="shoppinglist3_avg_price">9,000</span>&nbsp원
+            </div>
+        </div>
+
+        <div class="shoppinglist3_pricelist_box">
+            <div class="pricelist_first">
+                <span class="shoppinglist3_subject">감자</span>
+                <span class="shoppinglist3_kind">수미</span>
+                <span class="shoppinglist3_class">상품(100g 기준)</span></div>
+            <div class="pricelist_second">
+                <span class="shoppinglist3_quantity">2</span>
+            </div>
+            <div class="pricelist_third">
+                <span class="shoppinglist3_martprice">3,400</span>&nbsp원
+            </div>
+            <div class="pricelist_fourth">
+                <span class="shoppinglist3_avg_price">9,000</span>&nbsp원
+            </div>
+        </div>
+
+        <div class="shoppinglist3_pricelist_box">
+            <div class="pricelist_first">
+                <span class="shoppinglist3_subject">사과</span>
+                <span class="shoppinglist3_kind">홍로</span>
+                <span class="shoppinglist3_class">중품(10개 기준)</span></div>
+            <div class="pricelist_second">
+                <span class="shoppinglist3_quantity">3</span>
+            </div>
+            <div class="pricelist_third">
+                <span class="shoppinglist3_martprice">8,700</span>&nbsp원
+            </div>
+            <div class="pricelist_fourth">
+                <span class="shoppinglist3_avg_price">9,000</span>&nbsp원
+            </div>
+        </div>
+
+        <div class="shoppinglist3_pricelist_box">
+            <div class="pricelist_first">
+                <span class="shoppinglist3_subject">양파</span>
+                <span class="shoppinglist3_kind">햇양파</span>
+                <span class="shoppinglist3_class">상품(100g 기준)</span></div>
+            <div class="pricelist_second">
+                <span class="shoppinglist3_quantity">1</span>
+            </div>
+            <div class="pricelist_third">
+                <span class="shoppinglist3_martprice">8,700</span>&nbsp원
+            </div>
+            <div class="pricelist_fourth">
+                <span class="shoppinglist3_avg_price">9,000</span>&nbsp원
+            </div>
+        </div>
+
+        <div class="shoppinglist3_sub_text">
+            <span>고객님이 구매하실 상품들의&nbsp</span>
+            <span class="shoppinglist3_sub_text_avg">평균 물가 총계는
+                &nbsp<span class="shoppinglist3_sub_price">76,000</span>
+                원
+            </span>
+            <span>입니다.</span>
+        </div>
+
+        <div class="shoppinglist3_sub_text2">
+            <span class="shoppinglist3_sub_text_mart">이마트 과천점</span>
+            <span>에서 쇼핑하실 경우&nbsp</span>
+         <div class="shoppinglist3_sub_text2_group">
+            <span class="shoppinglist3_sub_differ_price">866</span><span>원</span>&nbsp
+            <span class="shoppinglist3_sub_discount">절약</span>
+        </div>
+            <span>할 수 있습니다.</span>
+        </div>
+        
+        <div class="shoppinglist3_jang_textbox">
+              <div class="shoppinglist3_jang_img">
+                <img src="./src/assets/icons/jang_textbox.png" alt="장비서 말풍선" class="jang_textbox">
+              </div>
+        <div class="shoppinglist3_jang_text">
+            <span>절약하신 <span class="shoppinglist3_sub_differ_price">866원</span>으로 <br>
+            <span class="shoppinglist3_recomm_product">롯데 핫식스(250ml)</span>를 더 구입할 수 있어요!</span>
+        </div>
+      
+</section>
+
+
 </body>
 
 </html>
