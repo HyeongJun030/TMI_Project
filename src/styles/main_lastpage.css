@@ -1,0 +1,106 @@
+html { 
+    background: url(../assets/images/bg5.jpg) no-repeat center fixed;
+    background-size: cover;
+  }
+
+.main_lastpage_image {
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+.main_lastpage_shoppinglist_button {
+    margin-left: -400px;
+    margin-right: 200px;
+    margin-top: 200px;
+}
+
+.main_lastpage_account_button {
+    margin-top: -80px;
+    margin-bottom: 80px;
+}
+
+
+.main_lastpage_price_button{
+    margin-top: 200px;
+    margin-left: 200px;
+    margin-right: -400px;
+}
+
+.main_lastpage_shoppinglist_img {
+    width: 600px;
+    height: 380px;
+}
+.bmain_lastpage_account_img {
+    width: 600px;
+    height: 380px;
+}
+.main_lastpage_discount_img {
+    width: 620px;
+    height: 380px;
+}
+.main_lastpage_price_img{
+    width: 600px;
+    height: 380px;
+}
+
+.main_lastpage_shoppinglist_word{
+    display: flex;
+    justify-content: center;
+    margin-top: -200px;
+    height: 300px;
+    color: aliceblue;
+    font-size: 35px;
+    font-weight: var(--weight-extra-bold);
+    text-shadow: 10px 10px 10px black; 
+}
+
+.main_lastpage_account_word{
+    display: flex;
+    justify-content: center;
+    margin-top: -220px;
+    height: 300px;
+    color: aliceblue;
+    font-size: 35px;
+    font-weight: var(--weight-extra-bold);
+    text-shadow: 10px 10px 10px black; 
+}
+
+.main_lastpage_discount_word{
+    display: flex;
+    justify-content: center;
+    margin-top: -210px;
+    margin-left: -20px;
+    height: 300px;
+    color: aliceblue;
+    font-size: 35px;
+    font-weight: var(--weight-extra-bold);
+    text-shadow: 10px 10px 10px black; 
+}
+
+
+.main_lastpage_price_word{
+    display: flex;
+    justify-content: center;
+    margin-top: -210px;
+    margin-left: -20px;
+    height: 300px;
+    color: aliceblue;
+    font-size: 35px;
+    font-weight: var(--weight-extra-bold);
+    text-shadow: 10px 10px 10px black; 
+}
+
+
+.main_lastpage_number{
+    font-size: 28px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.section {
+    padding: 50px 100px 100px 100px;
+    max-width: 1520px;
+    margin: auto;
+  }
+  
