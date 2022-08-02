@@ -432,7 +432,7 @@ select {
   border-radius: 0px;
   -moz-appearance: none;
   appearance: none;
-  background: url(../assets/icons/baseline_arrow.png) no-repeat 95% 50%;
+  background: url(/assets/icons/baseline_arrow.png) no-repeat 95% 50%;
 }
 
 select::-ms-expand {

@@ -8,14 +8,14 @@
   <title>장비서</title>
   <meta name="description" content="A project that provides price data services." />
   <meta name="author" content="TMI" />
-  <link rel="stylesheet" href="../src/styles/reset.css">
-  <link rel="stylesheet" href="../src/styles/shoppingList.css">
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/shoppingList.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="icon" type="image/png" href="../src/assets/icons/favicon.png" />
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png" />
 </head>
 
 <body>
@@ -23,13 +23,13 @@
     <!-- Navbar -->
     <nav id="navbar__vers-green">
       <div class="navbar__logo">
-        <a href="/html">
-          <img src="../src/assets/icons/jang_logo_green.png" alt="장비서 로고" class="logo__green">
+        <a href="/mainnav">
+          <img src="/assets/icons/jang_logo_green.png" alt="장비서 로고" class="logo__green">
         </a>
       </div>
       <ul class="navbar__menu">
-        <li><a href="/html/ShoppingList.html" class="navbar__menu__item active">쇼핑 리스트</a></li>
-        <li><a href="/html/priceData.html" class="navbar__menu__item">오늘의 물가</a></li>
+        <li><a href="/shoppinglist" class="navbar__menu__item active">쇼핑 리스트</a></li>
+        <li><a href="/pricedata" class="navbar__menu__item">오늘의 물가</a></li>
         <li><a href="#" class="navbar__menu__item">가계부 정리</a></li>
         <li><a href="#" class="navbar__menu__item">회원가입</a></li>
         <li><button type="button" id="open" class="navbar__menu__login-btn">로그인</button></li>
@@ -139,7 +139,7 @@
       <button id="btn-open-popup" class="btn "><span style="color: #EB7767; font-size: 50px;" class="material-icons">
           add_circle_outline
         </span> </button>
-      <a href="./ShoppingList2.html"><button class="btn btn-m"><span>어디서 얼마에 구입할 수 있는지 확인!</span></button></a>
+      <a href="/shoppinglistmap"><button class="btn btn-m"><span>어디서 얼마에 구입할 수 있는지 확인!</span></button></a>
     </div>
     <!--modal-->
     <div class="modal hidden">
@@ -188,7 +188,7 @@
           <!--버튼-->
           <div class="popup-foot">
             <button class="pop-btn confirm" id="confirm">등록</button>
-            <a href="/html/ShoppingList.html"><button class="pop-btn close" id="close">확인</button></a>
+            <a href="/shoppinglist"><button class="pop-btn close" id="close">확인</button></a>
           </div>
         </div>
 
